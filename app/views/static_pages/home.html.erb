@@ -1,0 +1,12 @@
+<h1>Bienvenue !</h1>
+
+<div class = "card-columns"> 
+<% Gossip.count.times do |i| -%>
+    <div class = "card"> 
+        <div class = "card-body">
+            <p class="card-title"><%= Gossip.find(i + 1).user.first_name %></p>
+            <%= link_to "#{Gossip.find(i + 1).title}", potin_path(Gossip.find(i + 1).id), class: "card-text"%>
+        </div>
+    </div>
+<% end -%>
+</div>

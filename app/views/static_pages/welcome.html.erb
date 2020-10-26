@@ -1,0 +1,8 @@
+<h1>Utilisateur numéro <%= @user_connected %></h1>
+
+<p>First-name : <%= User.find(@user_connected).first_name %></p>
+<p>Last-name : <%= User.find(@user_connected).last_name %></p>
+<p>Description : <%= User.find(@user_connected).description %></p>
+<p>Email : <%= User.find(@user_connected).email %></p>
+<p>Age : <%= User.find(@user_connected).age %></p>
+<p>City : <%= City.find(User.find(@user_connected).city_id).name %></p>

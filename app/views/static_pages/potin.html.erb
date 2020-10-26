@@ -1,0 +1,7 @@
+<h1><%= Gossip.find(@gossip_chose).title %></h1>
+
+<p>Créé par <%= link_to "#{Gossip.find(@gossip_chose).user.first_name}", welcoming_path(Gossip.find(@gossip_chose).user.id)%></p>
+
+<p><%= Gossip.find(@gossip_chose).content %></p>
+
+<p>Créé le <%=Gossip.find(@gossip_chose).created_at %></p>
