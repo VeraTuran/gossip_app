@@ -5,4 +5,5 @@ Rails.application.routes.draw do
   get '/contact', to: 'static_pages#contact'
   get '/home/:potin', to: 'static_pages#potin', as: 'potin'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  resources :gossips, only: [:new, :create]
 end
